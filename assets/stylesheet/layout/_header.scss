@@ -1,0 +1,308 @@
+// header hero
+
+.header {
+  &__hero {
+    padding-bottom: 10rem;
+    border-bottom: 0.1rem solid #c9c9c9;
+  }
+  &__bankist--wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 4rem;
+    @media (min-width: 768px) {
+      grid-template-columns: 3fr 2fr;
+      column-gap: 2rem;
+    }
+  }
+  &__bankist--info {
+  }
+  &__title {
+    font-size: 4rem;
+    @media (min-width: 768px) {
+      font-size: 4.7rem;
+    }
+    @media (min-width: 992px) {
+      font-size: 5.5rem;
+    }
+  }
+  &__title-break {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 0.5rem;
+      background-image: $gradient-primary;
+      z-index: -1;
+      transform: scale(1.07, 1.05) skewX(-15deg);
+    }
+  }
+  &__subtitle {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  &__link {
+    border-bottom: 0.1rem solid $color-primary;
+    padding-bottom: 0.2rem;
+    color: $color-primary;
+    font-size: 1.7rem;
+    margin-top: 3rem;
+    display: block;
+    width: max-content;
+  }
+
+  &__bankist--pic {
+    width: 100%;
+  }
+}
+
+// feature
+
+.feature {
+  padding: 10rem 0;
+  border-bottom: 0.1rem solid #c9c9c9;
+  &__title {
+    font-weight: bold;
+  }
+  &__desc {
+    margin-top: 2rem;
+  }
+  &__boxs--wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+    @media (min-width: 768px) {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 2rem;
+    }
+    margin: 4rem 0;
+  }
+  &__images {
+    align-self: end;
+  }
+  &__image {
+    width: 100%;
+  }
+  &__datas {
+    align-self: center;
+    justify-self: center;
+    width: 70%;
+  }
+
+  &__datas--circle {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: $color-primary-opacity;
+  }
+  &__datas--title {
+    margin: 1rem 0;
+  }
+  &__datas--desc {
+    font-size: 1.7rem;
+  }
+}
+
+// operation
+.operation {
+  margin: 10rem 0;
+  border-bottom: 0.1rem solid #c9c9c9;
+  &__header {
+    font-weight: bold;
+    color: $color-primary;
+    font-size: 1.8rem;
+  }
+  &__title {
+    font-size: 3rem;
+    margin: 2rem 0;
+
+    @media (min-width: 768px) {
+      font-size: 5rem;
+    }
+  }
+  &__article--wrapper {
+    background: #fff;
+    margin: 10rem 4rem;
+    padding: 2rem 1rem;
+  }
+  &__btns {
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    @media (min-width: 576px) {
+      transform: translateY(-90%);
+    }
+  }
+  &__btn {
+    all: unset;
+    border: none;
+    outline: none;
+    max-width: 20rem;
+    padding: 0.8rem 1.5rem;
+    color: #000;
+    font-size: 1.6rem;
+    text-align: center;
+    flex-grow: 1;
+    border-radius: 3.5rem;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  @at-root {
+    .success-btn {
+      background: $color-primary;
+    }
+    .danger-btn {
+      background-color: $color-tertiay-darker;
+    }
+    .yellow-btn {
+      background-color: $color-secondary;
+    }
+  }
+  &__circle {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: $color-tertiay-opacity;
+    position: absolute;
+    left: 4.5rem;
+  }
+
+  &__article--title {
+    font-size: 1.8rem;
+    padding: 2rem 0;
+  }
+  &__article--desc {
+    font-size: 1.5rem;
+    padding-bottom: 4rem;
+  }
+}
+//testimonail finance
+.finance {
+  padding-bottom: 5rem;
+  &__title {
+    font-weight: bold;
+    color: $color-primary;
+  }
+  &__header {
+    font-size: 2.5rem;
+  }
+  &__sliders {
+    // width: 100rem;
+    position: relative;
+    margin-top: 3rem;
+    height: 50rem;
+    overflow: hidden;
+
+    @media (min-width: 576px) {
+      height: 48rem;
+    }
+    @media (min-width: 786px) {
+      height: 44rem;
+    }
+  }
+  &__slider {
+    width: 100%;
+    position: absolute;
+    // height: 40rem;
+    transition: all 0.3s ease;
+  }
+  &__slider--testimonial {
+    width: 65%;
+    margin-inline: auto;
+    padding: 5rem 1rem;
+  }
+  &__slider--header {
+    font-weight: bold;
+    color: $color-tertiay;
+  }
+  &__slider--desc {
+    font-size: 1.4rem;
+    @media (min-width: 576px) {
+      font-size: 1.8rem;
+    }
+  }
+  &__users {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  &__user--images {
+    width: 6rem;
+    height: 6rem;
+  }
+  &__user--image {
+    width: 100%;
+    border-radius: 50%;
+  }
+  &__user--details {
+  }
+  &__user--name {
+  }
+  &__user--location {
+  }
+  &__btn-left,
+  &__btn-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    border: none;
+    background: rgba(255, 255, 255, 0.7);
+    font-family: inherit;
+    color: #333;
+    border-radius: 50%;
+    height: 5.5rem;
+    width: 5.5rem;
+    font-size: 3.25rem;
+    cursor: pointer;
+    &:hover {
+      transition: all 180ms ease;
+      background: #000a;
+      color: #fff;
+    }
+  }
+  &__btn-right {
+    right: 0;
+    @media (min-width: 576px) {
+      right: 2%;
+    }
+  }
+  &__btn-left {
+    left: 0;
+    @media (min-width: 576px) {
+      left: 2%;
+    }
+  }
+  @at-root {
+    .dots {
+      position: absolute;
+      bottom: 0%;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+    }
+    .dots__dot {
+      border: none;
+      background-color: #b9b9b9;
+      opacity: 0.7;
+      height: 1rem;
+      width: 1rem;
+      border-radius: 50%;
+      margin-right: 1.75rem;
+      cursor: pointer;
+      transition: all 0.5s;
+    }
+    .dots__dot--active {
+      background-color: #888;
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  @media (min-width: 576px) {
+    width: 54rem;
+  }
+
+  @media (min-width: 768px) {
+    width: 72rem;
+  }
+
+  @media (min-width: 992px) {
+    width: 96rem;
+  }
+
+  @media (min-width: 1200px) {
+    width: 114rem;
+  }
+  @media (min-width: 1400px) {
+    width: 137rem;
+  }
+}
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  display: none;
+  backdrop-filter: blur(5px);
+  z-index: 50;
+}
+.show {
+  display: block;
+}
+.hidden {
+  display: none;
+}
+.sticky {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(5px);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 900;
+}
+.hide-nav-bar {
+  right: -35rem !important;
+}
+.show-nav-bar {
+  right: 0 !important;
+}
+
+.ladder {
+  transform: translateY(-10%) !important;
+}
+.section {
+  transition: all 1s ease;
+}
+.aoseffect {
+  opacity: 0;
+  transform: translateY(20rem);
+}
